@@ -55,7 +55,7 @@ class MainViewController: UIViewController {
     @IBAction internal func refreshButtonDidTap() {
         self.currentIPAddressLabel.text = "Refreshing..."
         
-        self.request = JSONFire.request(to: IpifyNetworkService.getIP).parsedResponse { (response) in
+        self.request = JSONFire.request(to: Networking.Services.Ipify.getIP).parsedResponse { (response) in
             if response.error != nil {
                 self.currentIPAddressLabel.text = "Status code: \(response.statusCode)"
             } else {

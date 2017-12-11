@@ -10,6 +10,7 @@
 		08B35AB70E52E4C130945C7F /* Pods_JSONFireDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAEA4276D0CB25C0072E43B /* Pods_JSONFireDemo.framework */; };
 		234C90DFDABA0FD3F08AC6D5 /* Pods_JSONFireDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63892274EF6D0DF4165775F9 /* Pods_JSONFireDemoTests.framework */; };
 		67EDDFA9F081458AB43E503D /* Pods_JSONFireDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F7B27A43735DE1A817323E /* Pods_JSONFireDemoUITests.framework */; };
+		69720A3D1FDF2AA700E418D4 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69720A3C1FDF2AA700E418D4 /* NetworkServices.swift */; };
 		69944FFE1FDE97E800DFDF27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69944FFD1FDE97E800DFDF27 /* AppDelegate.swift */; };
 		699450051FDE97E800DFDF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 699450041FDE97E800DFDF27 /* Assets.xcassets */; };
 		699450131FDE97E800DFDF27 /* JSONFireDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699450121FDE97E800DFDF27 /* JSONFireDemoTests.swift */; };
@@ -17,7 +18,6 @@
 		6994502C1FDE982E00DFDF27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6994502B1FDE982E00DFDF27 /* LaunchScreen.xib */; };
 		699450311FDE988600DFDF27 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6994502F1FDE988600DFDF27 /* MainViewController.swift */; };
 		699450321FDE988600DFDF27 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 699450301FDE988600DFDF27 /* MainViewController.xib */; };
-		699450691FDEBC1100DFDF27 /* IpifyNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699450681FDEBC1100DFDF27 /* IpifyNetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +53,7 @@
 /* Begin PBXFileReference section */
 		24EACA905FD1F46EC001E3E5 /* Pods-JSONFireDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONFireDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-JSONFireDemo/Pods-JSONFireDemo.release.xcconfig"; sourceTree = "<group>"; };
 		63892274EF6D0DF4165775F9 /* Pods_JSONFireDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSONFireDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69720A3C1FDF2AA700E418D4 /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 		69944FFA1FDE97E800DFDF27 /* JSONFireDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONFireDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69944FFD1FDE97E800DFDF27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		699450041FDE97E800DFDF27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,7 +68,6 @@
 		6994502F1FDE988600DFDF27 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		699450301FDE988600DFDF27 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		699450661FDEBBBA00DFDF27 /* JSONFire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSONFire.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/JSONFire-ecphothpptrlfxaajntcznkujvpg/Build/Products/Debug-iphoneos/JSONFire.framework"; sourceTree = "<group>"; };
-		699450681FDEBC1100DFDF27 /* IpifyNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpifyNetworkService.swift; sourceTree = "<group>"; };
 		6D2B9B27FEF9CC47F2FDD50B /* Pods-JSONFireDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONFireDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSONFireDemo/Pods-JSONFireDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BBD626D78ACB52224036C470 /* Pods-JSONFireDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONFireDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSONFireDemoUITests/Pods-JSONFireDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D5F7B27A43735DE1A817323E /* Pods_JSONFireDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSONFireDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,7 +189,7 @@
 		699450671FDEBC0200DFDF27 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				699450681FDEBC1100DFDF27 /* IpifyNetworkService.swift */,
+				69720A3C1FDF2AA700E418D4 /* NetworkServices.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -503,9 +503,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69720A3D1FDF2AA700E418D4 /* NetworkServices.swift in Sources */,
 				69944FFE1FDE97E800DFDF27 /* AppDelegate.swift in Sources */,
 				699450311FDE988600DFDF27 /* MainViewController.swift in Sources */,
-				699450691FDEBC1100DFDF27 /* IpifyNetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
