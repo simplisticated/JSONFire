@@ -12,6 +12,6 @@ import SwiftyJSON
 
 public func request(to target: Target) -> Request {
     let absoluteUrl = target.baseUrl + (target.relativePath ?? "")
-    let dataRequest = Alamofire.request(absoluteUrl, method: target.method, parameters: target.parameters, encoding: target.encoding, headers: target.headers)
+    let dataRequest = Alamofire.request(absoluteUrl, method: target.method.alamofireHTTPMethod, parameters: target.parameters, encoding: target.encoding.alamofireParameterEnconding, headers: target.headers)
     return Request(target: target, dataRequest: dataRequest)
 }
