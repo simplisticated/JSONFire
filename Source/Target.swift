@@ -7,15 +7,14 @@
 //
 
 import Foundation
-import Alamofire
 import SwiftyJSON
 
 public protocol Target {
     var baseUrl: String { get }
     var relativePath: String?  { get }
     var method: HTTPMethod { get }
-    var parameters: Parameters? { get }
+    var parameters: [String : Any]? { get }
     var encoding: ParameterEncoding { get }
-    var headers: HTTPHeaders? { get }
+    var headers: [String : String]? { get }
     var parseResponse: ((_ response: JSON) -> Any)? { get }
 }
