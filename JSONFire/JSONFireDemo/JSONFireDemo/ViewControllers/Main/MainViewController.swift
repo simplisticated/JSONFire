@@ -8,6 +8,7 @@
 
 import UIKit
 import JSONFire
+import Alamofire
 
 class MainViewController: UIViewController {
 
@@ -32,7 +33,7 @@ class MainViewController: UIViewController {
     
     // MARK: Object variables & properties
     
-    fileprivate var request: Request?
+    fileprivate var request: JSONFire.Request?
     
     // MARK: Public object methods
     
@@ -55,7 +56,17 @@ class MainViewController: UIViewController {
         self.currentIPAddressLabel.text = "Refreshing..."
         
         self.request = JSONFire.request(to: IpifyNetworkService.getIP).parsedResponse { (response) in
-            self.currentIPAddressLabel.text = response.value as? String ?? MainViewController.unknownIPAddress
+            if response.error != nil {
+                self.currentIPAddressLabel.text = "Status code: \(response.statusCode)"
+            } else {
+                self.currentIPAddressLabel.text = response.value as? String ?? MainViewController.unknownIPAddress
+            }
+            
+            var text = response.value as? String ?? ""
+            
+            if text.isEmpty {
+                text = "\(((response.error as NSError?)?.code)!)"
+            }
         }
     }
     
