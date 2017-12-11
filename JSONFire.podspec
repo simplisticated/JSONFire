@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "JSONFire"
   s.version      = "1.0"
-  s.summary      = "The bridge between you and network"
+  s.summary      = "The bridge between developer and network"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-Simplifies work with network in iOS.
+Simplifies work with network in iOS. Provides fundamental architecture for fast implementation of network requests.
                    DESC
 
   s.homepage     = "https://github.com/igormatyushkin014/JSONFire"
