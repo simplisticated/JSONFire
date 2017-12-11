@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JSONFire"
-  s.version      = "1.1"
+  s.version      = "1.0"
   s.summary      = "The bridge between developer and network"
 
   # This description is used to generate tags and improve search results.
@@ -135,7 +135,7 @@ Simplifies work with network in iOS. Provides fundamental architecture for fast 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
-  s.dependency = 'Alamofire', '~> 4.6'
-  s.dependency = 'SwiftyJSON', '~> 4.0'
+  s.dependency "Alamofire", "~> 4.6"
+  s.dependency "SwiftyJSON", "~> 4.0"
 
 end
