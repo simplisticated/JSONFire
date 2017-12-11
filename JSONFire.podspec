@@ -80,7 +80,7 @@ Simplifies work with network in iOS. Provides fundamental architecture for fast 
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/igormatyushkin014/DataLayer.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/igormatyushkin014/JSONFire.git", :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
