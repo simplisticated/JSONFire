@@ -135,4 +135,7 @@ Simplifies work with network in iOS. Provides fundamental architecture for fast 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
+  s.dependency = 'Alamofire', '~> 4.6'
+  s.dependency = 'SwiftyJSON', '~> 4.0'
+
 end
