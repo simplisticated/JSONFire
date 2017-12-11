@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69720A3F1FDF2B5B00E418D4 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69720A3E1FDF2B5B00E418D4 /* Networking.swift */; };
+		69720A411FDF2C0000E418D4 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69720A401FDF2C0000E418D4 /* ParameterEncoding.swift */; };
+		69720A431FDF2CAA00E418D4 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69720A421FDF2CAA00E418D4 /* HTTPMethod.swift */; };
 		699450471FDE996300DFDF27 /* JSONFire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6994503D1FDE996300DFDF27 /* JSONFire.framework */; };
 		6994504C1FDE996300DFDF27 /* JSONFireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6994504B1FDE996300DFDF27 /* JSONFireTests.swift */; };
 		6994504E1FDE996300DFDF27 /* JSONFire.h in Headers */ = {isa = PBXBuildFile; fileRef = 699450401FDE996300DFDF27 /* JSONFire.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +34,9 @@
 		0254EB2F98501EAFDB59BD96 /* Pods_JSONFire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSONFire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1329EF48D983C4AAEDD206A6 /* Pods-JSONFire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONFire.release.xcconfig"; path = "../JSONFireDemo/Pods/Target Support Files/Pods-JSONFire/Pods-JSONFire.release.xcconfig"; sourceTree = "<group>"; };
 		4D468EF348182C3FF7EB1B54 /* Pods-JSONFire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONFire.debug.xcconfig"; path = "../JSONFireDemo/Pods/Target Support Files/Pods-JSONFire/Pods-JSONFire.debug.xcconfig"; sourceTree = "<group>"; };
+		69720A3E1FDF2B5B00E418D4 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		69720A401FDF2C0000E418D4 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		69720A421FDF2CAA00E418D4 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		6994503D1FDE996300DFDF27 /* JSONFire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONFire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		699450401FDE996300DFDF27 /* JSONFire.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONFire.h; sourceTree = "<group>"; };
 		699450411FDE996300DFDF27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,6 +115,9 @@
 				699450581FDE998D00DFDF27 /* Target.swift */,
 				6994505C1FDE9D5E00DFDF27 /* Request.swift */,
 				699450601FDEB3AB00DFDF27 /* Response.swift */,
+				69720A3E1FDF2B5B00E418D4 /* Networking.swift */,
+				69720A401FDF2C0000E418D4 /* ParameterEncoding.swift */,
+				69720A421FDF2CAA00E418D4 /* HTTPMethod.swift */,
 			);
 			name = Source;
 			path = ../../../Source;
@@ -280,7 +289,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69720A411FDF2C0000E418D4 /* ParameterEncoding.swift in Sources */,
 				699450611FDEB3AB00DFDF27 /* Response.swift in Sources */,
+				69720A431FDF2CAA00E418D4 /* HTTPMethod.swift in Sources */,
+				69720A3F1FDF2B5B00E418D4 /* Networking.swift in Sources */,
 				699450591FDE998D00DFDF27 /* Target.swift in Sources */,
 				6994505D1FDE9D5E00DFDF27 /* Request.swift in Sources */,
 				6994505B1FDE99C400DFDF27 /* JSONFire.swift in Sources */,

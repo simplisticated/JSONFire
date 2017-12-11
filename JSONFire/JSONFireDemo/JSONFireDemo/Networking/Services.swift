@@ -8,15 +8,9 @@
 
 import Foundation
 import JSONFire
-import Alamofire
 import SwiftyJSON
 
-struct Networking {
-    
-    struct Services {
-    }
-    
-}
+// MARK: Ipify
 
 extension Networking.Services {
     
@@ -38,7 +32,7 @@ extension Networking.Services {
             }
         }
         
-        var parameters: Parameters? {
+        var parameters: [String : Any]? {
             switch self {
             case .getIP:
                 return [
@@ -50,11 +44,11 @@ extension Networking.Services {
         var encoding: ParameterEncoding {
             switch self {
             case .getIP:
-                return URLEncoding.default
+                return .url
             }
         }
         
-        var headers: HTTPHeaders? {
+        var headers: [String : String]? {
             switch self {
             case .getIP:
                 return nil

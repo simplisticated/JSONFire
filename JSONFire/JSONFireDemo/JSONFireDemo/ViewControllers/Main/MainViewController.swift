@@ -8,7 +8,6 @@
 
 import UIKit
 import JSONFire
-import Alamofire
 
 class MainViewController: UIViewController {
 
