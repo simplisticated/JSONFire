@@ -1,0 +1,33 @@
+platform :ios, '9.0'
+
+workspace '../JSONFire.xcworkspace'
+
+target 'JSONFireDemo' do
+  use_frameworks!
+
+  # Pods for JSONFireDemo
+  pod 'Alamofire', '~> 4.6'
+  pod 'SwiftyJSON', '~> 4.0'
+
+  target 'JSONFireDemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'JSONFireDemoUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'JSONFire' do
+
+  project '../JSONFire/JSONFire.xcodeproj'
+
+  use_frameworks!
+
+  pod 'Alamofire', '~> 4.6'
+  pod 'SwiftyJSON', '~> 4.0'
+
+end

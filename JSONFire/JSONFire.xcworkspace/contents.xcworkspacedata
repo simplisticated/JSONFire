@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:JSONFire/JSONFire.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:JSONFireDemo/JSONFireDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:JSONFireDemo/Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

@@ -1,0 +1,6 @@
+framework module Pods_JSONFireDemoTests {
+  umbrella header "Pods-JSONFireDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
