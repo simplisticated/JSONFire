@@ -12,4 +12,5 @@ import SwiftyJSON
 public struct Response<Value: Any> {
     public var value: Value
     public var error: Error?
+    public var statusCode: Int
 }

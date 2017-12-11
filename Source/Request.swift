@@ -48,7 +48,8 @@ public class Request {
         self.encapsulatedRequest.responseJSON(completionHandler: { (dataResponse) in
             let jsonDictionary = dataResponse.result.value as? [String : Any]
             let json: JSON = jsonDictionary == nil ? .null : JSON(jsonDictionary!)
-            let response = Response(value: json, error: dataResponse.result.error)
+            let statusCode = dataResponse.response?.statusCode ?? 0
+            let response = Response(value: json, error: dataResponse.result.error, statusCode: statusCode)
             handler(response)
         })
         
@@ -61,7 +62,8 @@ public class Request {
             let jsonDictionary = dataResponse.result.value as? [String : Any]
             let json: JSON = jsonDictionary == nil ? .null : JSON(jsonDictionary!)
             let parsedResponse = self.target.parseResponse?(json) ?? NSNull()
-            let response = Response(value: parsedResponse, error: dataResponse.result.error)
+            let statusCode = dataResponse.response?.statusCode ?? 0
+            let response = Response(value: parsedResponse, error: dataResponse.result.error, statusCode: statusCode)
             handler(response)
         })
         
