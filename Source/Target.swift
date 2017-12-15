@@ -16,5 +16,6 @@ public protocol Target {
     var parameters: [String : Any]? { get }
     var encoding: ParameterEncoding { get }
     var headers: [String : String]? { get }
+    var responseSimulator: ResponseSimulator { get }
     var parseResponse: ((_ response: JSON) -> Any)? { get }
 }

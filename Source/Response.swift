@@ -13,4 +13,14 @@ public struct Response<Value: Any> {
     public var value: Value
     public var error: Error?
     public var statusCode: Int
+    
+    public init(
+        value: Value,
+        error: Error?,
+        statusCode: Int
+    ) {
+        self.value = value
+        self.error = error
+        self.statusCode = statusCode
+    }
 }
