@@ -55,6 +55,22 @@ extension Networking.Services {
             }
         }
         
+        var responseSimulator: ResponseSimulator {
+            switch self {
+            case .getIP:
+                return ResponseSimulator(
+                    response: Response(
+                        value: JSON([
+                            "ip": "1.0.0.0"
+                        ]),
+                        error: nil,
+                        statusCode: 200
+                    ),
+                    delay: .seconds(count: 2)
+                )
+            }
+        }
+        
         var parseResponse: ((JSON) -> Any)? {
             switch self {
             case .getIP:
